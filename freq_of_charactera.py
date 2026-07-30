@@ -13,12 +13,13 @@ def first_non_repeting_char(str):
         if freq[ch] == 1:
             print(ch)
             return
-    
+    print("No non-repeating character")
+
 
 
 
 def main():
     inp = input("Enter String: ")
-    a = count_freq_character(inp)
-    print(a)
+    # a = count_freq_character(inp)
+    first_non_repeting_char(inp)
 main()
