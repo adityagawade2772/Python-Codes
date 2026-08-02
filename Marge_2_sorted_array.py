@@ -1,4 +1,4 @@
-# marge 2 sorted array without duplicate
+# marge 2 sorted array without duplicate using 2 pointer
 
 def marge_array(num1, num2):
     n = len(num1)
