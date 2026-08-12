@@ -14,9 +14,34 @@ def brut(arr):
     return max_count
 
 
+def better(arr): # O(n + nlogn)
+    arr.sort() # tc -> O(nlogn)
+    last_small= "-inf"
+    count= 0
+    n = len(arr)
+    longest= 0
+    for i in range(0,n): #tc O(n)
+        num = arr[i]
+        if num-1== last_small:
+            count += 1
+            last_small= num
+        else:
+            count = 1 
+            last_small = num
+        longest= max(longest, count)
+
+    return longest
+
+
+def optimal(arr):
+    my_set= set()
+    n = len(arr)
+    for i in range(0, n):
+        my_set.add(arr[i])
+        
 
 def main():
     n = list(map(int, input().split()))
-    a = brut(n)
+    a = better(n)
     print(a)
 main()
