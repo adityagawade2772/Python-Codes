@@ -1,3 +1,4 @@
+# code an debug yt vdeo no 75
 def solve(index, subset,nums,result):
     if (index >= len(nums)):
         result.append(subset.copy())
