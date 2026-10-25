@@ -1,6 +1,6 @@
 def solve(index, subset,nums,result):
     if (index >= len(nums)):
-        result.append(subset.copy)
+        result.append(subset.copy())
         return
     
     subset.append(nums[index])
