@@ -1,6 +1,9 @@
 def solve(index, subset,nums,result):
     if (index >= len(nums)):
         result.append(subset.copy())
+        # used .copy() bcoz if we don't used that it will only point to -> subset,
+        # after some time if we made changes in subsert result also get changed,
+        # so by using shallow copy it create new list
         return
     
     subset.append(nums[index])
