@@ -79,15 +79,15 @@ class Solution:
 
 
     class Solution:
-    def solve(self,mat, dp,n):
-        for day in  range(1, n):
-            for last in range(0,4):
-                maxi =0
-                for i in range(0,3):
-                    if i != last:
-                        maxi = max(maxi, mat[day][i] + dp[day-1][i])
-                dp[day][last] = maxi
-        return dp[n-1][3]
+        def solve(self,mat, dp,n):
+            for day in  range(1, n):
+                for last in range(0,4):
+                    maxi =0
+                    for i in range(0,3):
+                        if i != last:
+                            maxi = max(maxi, mat[day][i] + dp[day-1][i])
+                    dp[day][last] = maxi
+            return dp[n-1][3]
             
     def maximumPoints(self, mat):
         n = len(mat)
